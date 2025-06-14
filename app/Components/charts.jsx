@@ -1,24 +1,31 @@
 "use client";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import dynamic from "next/dynamic";
-import OHLC from "./SymbolInfo";
 
 // Dynamically import Chart only on client side
-const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
+const Chart = dynamic(() => import("react-apexcharts"), {
+  ssr: false,
+  loading: () => <p className="text-white text-center mt-4">Loading chart...</p>,
+});
 
 export default function SemesterMarksCandlestick() {
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const series = [
     {
-      // OHLC
       data: [
         { x: "Class 10", y: [7.0, 7.8, 6.9, 7.6] },
-        { x: "Class 12", y: [7.6, 7.9, 7.4, 7.25] }, // slight red for realism
+        { x: "Class 12", y: [7.6, 7.9, 7.4, 7.25] },
         { x: "Sem 1", y: [7.25, 7.7, 7.2, 7.55] },
         { x: "Sem 2", y: [7.55, 8.0, 7.45, 7.85] },
         { x: "Sem 3", y: [7.85, 8.2, 7.75, 8.15] },
         { x: "Sem 4", y: [8.15, 8.5, 8.1, 8.35] },
         { x: "Sem 5", y: [8.35, 8.7, 8.3, 8.55] },
-        { x: "Sem 6", y: [8.55, 8.8, 8.4, 7.95] }, // minor red
+        { x: "Sem 6", y: [8.55, 8.8, 8.4, 7.95] },
         { x: "Sem 7", y: [7.95, 8.1, 7.85, 7.95] },
         { x: "Sem 8", y: [7.95, 8.05, 7.9, 7.95] },
       ],
@@ -30,14 +37,10 @@ export default function SemesterMarksCandlestick() {
       type: "candlestick",
       height: 350,
       toolbar: { show: false },
-      background: "transparent", // ensures background inherits container color
+      background: "transparent",
     },
-      zoom: {
-    enabled: false, // optional: if zoom causes glitches
-  },
-    theme: {
-      mode: "dark", // enables dark mode styling
-    },
+    zoom: { enabled: false },
+    theme: { mode: "dark" },
     title: {
       text: "Academic Performance Trend",
       align: "center",
@@ -45,7 +48,7 @@ export default function SemesterMarksCandlestick() {
       style: {
         fontSize: "18px",
         fontWeight: 600,
-        color: "#ffffff", // title color
+        color: "#ffffff",
       },
     },
     plotOptions: {
@@ -81,7 +84,7 @@ export default function SemesterMarksCandlestick() {
       tickAmount: 8,
     },
     tooltip: {
-      theme: "dark", // dark background tooltip
+      theme: "dark",
       y: {
         formatter: (v) => v?.toFixed(2),
       },
@@ -89,17 +92,12 @@ export default function SemesterMarksCandlestick() {
   };
 
   return (
-    <>
-   <div className="w-[900px] h-[400px] mx-auto overflow-hidden">
-  <Chart
-    options={options}
-    series={series}
-    type="candlestick"
-    width={900}
-    height={400}
-  />
-</div>
-
-    </>
+    <div className="w-[900px] h-[400px] mx-auto overflow-hidden">
+      {isClient ? (
+        <Chart options={options} series={series} type="candlestick" width={900} height={400} />
+      ) : (
+        <p className="text-white text-center  mt-10">Loading chart...</p>
+      )}
+    </div>
   );
 }

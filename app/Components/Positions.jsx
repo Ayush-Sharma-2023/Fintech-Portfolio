@@ -6,7 +6,7 @@ const positions = [
   {
     role: "Software Developer Intern",
     company: "Sharda Tech",
-    duration: "2 months",
+    duration: "April-2025 - Present",
     skills: ["Mongo", "Next.JS", "React"],
     description: [
       "Developed RESTful services for internal tools.",
@@ -14,11 +14,40 @@ const positions = [
       "Wrote optimized SQL queries and handled DB migrations."
     ],
   },
+
+
+  {
+    role: "Frontend Developer",
+    company: "VidyaInterna Hub",
+    duration: "Oct-2024 - Jan-2025",
+    skills: ["Next.JS", "React", "Tailwind"],
+    description: [
+      "Developed RESTful services for internal tools.",
+      "Managed authentication using JWT and Spring Security.",
+      "Wrote optimized SQL queries and handled DB migrations."
+    ],
+  },
+  {
+    role: "Open Source Contributor",
+    company: "GSSOC",
+    duration: "Oct-2024 - Nov-2024",
+    skills: ["Mongo", "Next.JS", "React"],
+    description: [
+      "Developed RESTful services for internal tools.",
+      "Managed authentication using JWT and Spring Security.",
+      "Wrote optimized SQL queries and handled DB migrations."
+    ],
+  },
+
+
+
+
+
   {
     role: "Frontend Developer",
     company: "RNPSoft Pvt. Ltd.",
-    duration: "3 months",
-    skills: ["React.js", "Tailwind", "REST APIs"],
+    duration: "May-2024 - Aug-2024",
+    skills: ["React.js", "CSS"],
     description: [
       "Built a dynamic dashboard using React.",
       "Worked with REST APIs for real-time updates.",
@@ -37,7 +66,7 @@ export default function Positions() {
   return (
     <div className="max-w-3xl mx-auto px-4">
       <h1 className="text-2xl font-bold mb-6 flex items-center gap-2">
-        <Briefcase className="text-blue-600" /> Positions (Experience)
+        <Briefcase className="text-blue-600" /> Positions
       </h1>
 
       {positions.map((pos, idx) => (

@@ -3,7 +3,7 @@ import React from "react";
 
 function SymbolInfo() {
   return (
-    <div className="fixed right-5 top-20 w-[300px] bg-gray-900 text-white rounded-2xl shadow-xl p-4 space-y-3 z-40">
+    <div className="fixed right-5 top-16 w-[300px] bg-gray-900 text-white rounded-2xl shadow-xl p-4 space-y-3 z-40">
       {/* HEADER */}
       <div>
         <h2 className="text-xl font-bold">Ayush Sharma</h2>
