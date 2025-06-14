@@ -14,8 +14,8 @@ export default function Page() {
       <Sidebar />
 
       <main className=" grid py-4">
-        <div className="flex gap-2 ">
-          <OHLC />
+        <div className="flex gap-2 mx-auto ">
+          {/* <OHLC /> */}
           <Charts />
           <IPOCard/>
         </div>
