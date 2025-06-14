@@ -4,7 +4,7 @@ import { Briefcase, Calendar, BadgeInfo } from "lucide-react";
 
 const positions = [
   {
-    role: "Software Developer Intern test",
+    role: "Software Developer Intern",
     company: "Sharda Tech",
     duration: "2 months",
     skills: ["Mongo", "Next.JS", "React"],
