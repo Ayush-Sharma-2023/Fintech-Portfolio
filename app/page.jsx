@@ -6,6 +6,7 @@ import Desc from "./Components/Desc";
 import IPOCard from "./Components/IPO";
 import OHLC from "./Components/leftSidebar";
 import NiftyValueCard from "./Components/NiftyData";
+// import Bull from "../public/images/bull.jpg"
 
 export default function Page() {
   return (
@@ -14,14 +15,16 @@ export default function Page() {
       <Sidebar />
 
       <main className=" grid py-4">
-        <div className="flex gap-2 mx-auto ">
+        <div className="flex gap-10 mx-auto ">
           {/* <OHLC /> */}
+          <img src="/images/bull.png" alt="Bull" className="w-64 h-64 mt-16" />
+
           <Charts />
-          <IPOCard/>
+          <img src="/images/bear.png" alt="Bear" className="w-64 h-64 mt-16" />
+          <IPOCard />
         </div>
         <div className="min-w-7xl mx-20 mt-4 ">
-      <Desc />
-
+          <Desc />
         </div>
       </main>
     </div>

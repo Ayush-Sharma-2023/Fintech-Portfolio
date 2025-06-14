@@ -24,48 +24,24 @@ const projects = [
     link: "https://github.com/Ayush-Sharma-2023/Finance_Management_Platform",
   },
   {
-    name: "Finance Management and Budgeting tool",
-    ticker: "NSE",
-    tech: "Next.js, Tailwind, API",
-    description: (
-      <>
-        A Platform to calculate Tax by comparing Old Tax Regime vs New Tax
-        Regime <br />
-        (As per Budget FY25-26) <br />
-        and Analyze various investment assets and MF
-      </>
-    ),
-    link: "https://github.com/Ayush-Sharma-2023/Finance_Management_Platform",
-  },
-  {
-    name: "Finance Management and Budgeting tool",
-    ticker: "NSE",
-    tech: "Next.js, Tailwind, API",
-    description: (
-      <>
-        A Platform to calculate Tax by comparing Old Tax Regime vs New Tax
-        Regime <br />
-        (As per Budget FY25-26) <br />
-        and Analyze various investment assets and MF
-      </>
-    ),
-    link: "https://github.com/Ayush-Sharma-2023/Finance_Management_Platform",
-  },
+  name: "Auto Attendance Tracker",
+  ticker: "NSE",
+  tech: "JavaScript, DOM, Browser Extension",
+  description: (
+    <>
+      A browser extension that scans your online attendance table using DOM parsing,<br />
+      calculates how many classes you can safely skip or must attend to maintain a 75% threshold,<br />
+      and dynamically injects an interactive planner back into the same page.<br />
+      ⚡ Loved and used by hundreds of students for its efficiency and accuracy.
+      <br />
+      Works on https://ezone.sharda.ac.in/ezone-2022/admin/studentlogin
+    </>
+  ),
+  link: "https://github.com/Ayush-Sharma-2023/attendance-extension",
+}
+
+  
  
-  {
-    name: "Finance Management and Budgeting tool",
-    ticker: "NSE",
-    tech: "Next.js, Tailwind, API",
-    description: (
-      <>
-        A Platform to calculate Tax by comparing Old Tax Regime vs New Tax
-        Regime <br />
-        (As per Budget FY25-26) <br />
-        and Analyze various investment assets and MF
-      </>
-    ),
-    link: "https://github.com/Ayush-Sharma-2023/Finance_Management_Platform",
-  },
  
 ];
 
