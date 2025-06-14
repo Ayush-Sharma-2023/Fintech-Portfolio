@@ -26,7 +26,8 @@ export default function Desc() {
   };
 
   return (
-    <div className="p-6 max-w-[55rem] mx-auto h-[50rem] bg-gray-900 text-gray-100 rounded-lg shadow-xl">
+    // <div className="p-6 max-w-[55rem] mx-auto h-[50rem] bg-gray-900 text-gray-100 rounded-lg shadow-xl">
+    <div className="p-6   h-[50rem] bg-gray-900 text-gray-100 rounded-lg shadow-xl">
       {/* <h1 className="text-2xl font-bold mb-6 text-white">📘 Description Panel</h1> */}
 
       {/* Tabs */}

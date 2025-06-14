@@ -92,9 +92,9 @@ export default function SemesterMarksCandlestick() {
   };
 
   return (
-    <div className="w-[900px] h-[400px] mx-auto overflow-hidden">
+    <div className="w-[800px] h-[400px]  ">
       {isClient ? (
-        <Chart options={options} series={series} type="candlestick" width={900} height={400} />
+        <Chart options={options} series={series} type="candlestick" width={800} height={400} />
       ) : (
         <p className="text-white text-center  mt-10">Loading chart...</p>
       )}

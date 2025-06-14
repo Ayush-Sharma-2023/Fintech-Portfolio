@@ -63,49 +63,51 @@ export default function Positions() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  return (
-    <div className="max-w-3xl mx-auto px-4">
-      <h1 className="text-2xl font-bold mb-6 flex items-center gap-2">
-        <Briefcase className="text-blue-600" /> Positions
-      </h1>
+ return (
+  // <div className="max-w-3xl mx-auto px-4 text-white">
+  <div className="max-w-full mx-auto px-4 text-white">
+    <h1 className="text-2xl font-bold mb-6 flex items-center gap-2 text-white">
+      <Briefcase className="text-blue-400" /> Positions
+    </h1>
 
-      {positions.map((pos, idx) => (
-        <div
-          key={idx}
-          className="mb-4 p-4 border-l-4 border-blue-500 bg-white shadow rounded"
-        >
-          <div className="flex justify-between items-center">
-            <div>
-              <h2 className="text-lg font-semibold text-gray-800">
-                {pos.role} @ {pos.company}
-              </h2>
-              <p className="text-sm text-gray-500 flex items-center gap-1">
-                <Calendar size={16} /> {pos.duration}
-              </p>
-              <p className="mt-1 text-sm text-gray-600 italic">
-                Skills: {pos.skills.join(", ")}
-              </p>
-            </div>
-
-            <button
-              onClick={() => toggleAccordion(idx)}
-              className="text-blue-500 hover:text-blue-600"
-              title="More Info"
-            >
-              <BadgeInfo />
-            </button>
+    {positions.map((pos, idx) => (
+      <div
+        key={idx}
+        className="mb-4 p-4 border-l-4 border-blue-500 bg-gray-900 shadow-md rounded"
+      >
+        <div className="flex justify-between items-center">
+          <div>
+            <h2 className="text-lg font-semibold text-white">
+              {pos.role} @ {pos.company}
+            </h2>
+            <p className="text-sm text-gray-400 flex items-center gap-1">
+              <Calendar size={16} /> {pos.duration}
+            </p>
+            <p className="mt-1 text-sm text-gray-300 italic">
+              Skills: {pos.skills.join(", ")}
+            </p>
           </div>
 
-          {/* Accordion description */}
-          {openIndex === idx && (
-            <div className="mt-3 text-sm text-gray-700 space-y-2">
-              {pos.description.map((line, i) => (
-                <p key={i}>• {line}</p>
-              ))}
-            </div>
-          )}
+          <button
+            onClick={() => toggleAccordion(idx)}
+            className="text-blue-400 hover:text-blue-300"
+            title="More Info"
+          >
+            <BadgeInfo />
+          </button>
         </div>
-      ))}
-    </div>
-  );
+
+        {/* Accordion description */}
+        {openIndex === idx && (
+          <div className="mt-3 text-sm text-gray-200 space-y-2">
+            {pos.description.map((line, i) => (
+              <p key={i}>• {line}</p>
+            ))}
+          </div>
+        )}
+      </div>
+    ))}
+  </div>
+);
+
 }

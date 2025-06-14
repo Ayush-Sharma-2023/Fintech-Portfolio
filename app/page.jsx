@@ -1,9 +1,10 @@
 "use client";
 import React from "react";
 import Charts from "./Components/charts";
-import Sidebar from "./Components/Sidebar";
+import Sidebar from "./Components/Watchlist";
 import Desc from "./Components/Desc";
-import OHLC from "./Components/SymbolInfo";
+import IPOCard from "./Components/IPO";
+import OHLC from "./Components/leftSidebar";
 import NiftyValueCard from "./Components/NiftyData";
 
 export default function Page() {
@@ -12,14 +13,16 @@ export default function Page() {
       {/* Sidebar stays fixed */}
       <Sidebar />
 
-      {/* Main Content Area */}
-      <main className="flex-1 overflow-auto p-4">
-        <div className="flex items-start">
-          <Charts />
+      <main className=" grid py-4">
+        <div className="flex gap-2 ">
           <OHLC />
+          <Charts />
+          <IPOCard/>
         </div>
-          {/* <NiftyValueCard/> */}
-        <Desc />
+        <div className="min-w-7xl mx-20 mt-4 ">
+      <Desc />
+
+        </div>
       </main>
     </div>
   );

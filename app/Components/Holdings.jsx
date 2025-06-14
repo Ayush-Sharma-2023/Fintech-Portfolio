@@ -1,14 +1,12 @@
 import React from "react";
 
 const skills = [
-  { symbol: "React", months: 12, confidence: "Proficient" },
-  { symbol: "Next.js", months: 8, confidence: "Proficient" },
-  { symbol: "Tailwind", months: 10, confidence: "Proficient" },
-  { symbol: "Node.js", months: 7, confidence: "Intermediate" },
-  { symbol: "Prisma", months: 5, confidence: "Intermediate" },
-  { symbol: "MongoDB", months: 6, confidence: "Intermediate" },
-  { symbol: "Java", months: 24, confidence: "Proficient" },
-  { symbol: "SQL", months: 10, confidence: "Intermediate" },
+  { symbol: "React",    months: 14, confidence: "AAA" },
+  { symbol: "Tailwind", months: 14, confidence: "AAA" },
+  { symbol: "Next.js",  months: 9,  confidence: "AA" },
+  { symbol: "Node.js",  months: 7,  confidence: "AA" },
+  { symbol: "MongoDB",  months: 3,  confidence: "A" },
+  { symbol: "Java",     months: 24, confidence: "AA" }, 
 ];
 
 function Holdings() {
@@ -20,7 +18,7 @@ function Holdings() {
           <tr>
             <th className="px-4 py-2">Symbol</th>
             <th className="px-4 py-2">Net Qty (in months)</th>
-            <th className="px-4 py-2">Current Status</th>
+            <th className="px-4 py-2">Rating</th>
           </tr>
         </thead>
         <tbody>
