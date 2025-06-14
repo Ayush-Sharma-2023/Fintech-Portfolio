@@ -1,8 +1,12 @@
 "use client";
 import React, { useState } from "react";
+import { useRouter } from "next/navigation";
+
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 export default function IPOCard() {
+    const router = useRouter();
+
   const [open, setOpen] = useState(false);
 
   const toggleCard = () => setOpen((prev) => !prev);
@@ -23,7 +27,7 @@ export default function IPOCard() {
           open ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-8 pointer-events-none"
         }`}
       >
-        <h2 className="text-xl font-bold text-green-400 mb-2">🚀 Upcoming IPO</h2>
+        <h2 className="text-xl font-bold text-green-400 mb-2">Upcoming IPO</h2>
         <p className="text-sm text-gray-400 mb-4">
           Listing Date • July 2026 | Sector: B.Tech
         </p>
@@ -39,12 +43,13 @@ export default function IPOCard() {
         </div>
 
         <div className="mt-4 text-green-500 italic text-sm">
-          📢 Pssst... be an early investor in this IPO!
+          Pssst... be an early investor in this IPO!
         </div>
 
         <div className="mt-4 w-full grid gap-2">
           <button
-            onClick={() => alert("📬 Reach out at: ayushsharmaarps@gmail.com {Under development}")}
+                  onClick={() => router.push("/Contact")}
+
             className="w-full bg-green-600 hover:bg-green-700 text-white text-xs py-1.5 rounded-lg transition"
           >
             🔔 Set Price Alerts
