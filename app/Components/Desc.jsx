@@ -39,7 +39,7 @@ export default function Desc() {
             className={`py-2 px-4 font-medium border-b-2 transition-all ${
               activeTab === tab
                 ? "border-blue-400 text-blue-400"
-                : "border-transparent text-gray-400 hover:text-blue-300"
+                : "border-transparent text-gray-400 hover:text-blue-300 hover:cursor-pointer"
             }`}
           >
             {tab}

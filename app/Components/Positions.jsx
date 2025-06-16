@@ -90,7 +90,7 @@ export default function Positions() {
 
           <button
             onClick={() => toggleAccordion(idx)}
-            className="text-blue-400 hover:text-blue-300"
+            className="text-blue-400 hover:text-blue-300 hover:cursor-pointer"
             title="More Info"
           >
             <BadgeInfo />

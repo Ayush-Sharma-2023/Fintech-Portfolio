@@ -16,7 +16,7 @@ export default function IPOCard() {
       {/* Toggle Button (Top-Right) */}
       <button
         onClick={toggleCard}
-        className="fixed top-4 right-4 z-30 bg-gray-800 text-white px-4 py-1 rounded hover:bg-gray-700 transition-all text-sm flex items-center gap-1"
+        className="fixed top-4 right-4 z-30 bg-gray-800 text-white px-4 py-1 rounded hover:bg-gray-700 transition-all text-sm flex items-center gap-1 hover:cursor-pointer"
       >
         Upcoming IPO {open ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
       </button>
@@ -50,14 +50,14 @@ export default function IPOCard() {
           <button
                   onClick={() => router.push("/Contact")}
 
-            className="w-full bg-green-600 hover:bg-green-700 text-white text-xs py-1.5 rounded-lg transition"
+            className="w-full bg-green-600 hover:bg-green-700 text-white text-xs py-1.5 rounded-lg transition hover:cursor-pointer"
           >
             🔔 Set Price Alerts
           </button>
 
           <button
             onClick={() => alert("📄 Downloading Resume... {Under development}")}
-            className="w-full bg-blue-600 hover:bg-blue-700 text-white text-xs py-1.5 rounded-lg transition"
+            className="w-full bg-blue-600 hover:bg-blue-700 text-white text-xs py-1.5 rounded-lg transition hover:cursor-pointer"
           >
             Download Resume
           </button>

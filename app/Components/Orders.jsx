@@ -34,7 +34,7 @@ function Orders() {
   return (
     <div className="p-6 bg-gray-900 text-white rounded-lg shadow-lg w-full overflow-auto">
       <h2 className="text-2xl font-semibold mb-4">
-        📦 Orders (Achievements & Goals)
+        Orders (Achievements & Goals)
       </h2>
       <table className="min-w-full text-sm text-left">
         <thead className="bg-gray-800 text-gray-300">
@@ -55,7 +55,7 @@ function Orders() {
                 <td className="px-4 py-2">
                   <button onClick={() => toggleAccordion(idx)}>
                     <Info
-                      className={`w-5 h-5 hover:text-blue-400 transition ${
+                      className={`w-5 h-5 hover:text-blue-400 hover:cursor-pointer transition ${
                         openIdx === idx ? "text-blue-400" : "text-gray-400"
                       }`}
                     />

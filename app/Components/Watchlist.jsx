@@ -67,7 +67,7 @@ export default function Sidebar() {
       {/* Toggle Button - top-left */}
       <button
   onClick={toggleSidebar}
-  className="fixed top-4 left-8 z-50 bg-gray-800 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-gray-700 transition-all shadow"
+  className="fixed top-4 left-8 z-50 bg-gray-800 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-gray-700 transition-all shadow hover:cursor-pointer"
 >
   {sidebarOpen ? (
     <ChevronUp size={18} />
@@ -96,7 +96,9 @@ export default function Sidebar() {
             {projects.map((proj, idx) => (
               <div
                 key={idx}
-                className="relative bg-gray-800 p-3 rounded hover:bg-gray-700 transition-colors"
+                className="relative bg-gray-800 p-3 rounded hover:bg-gray-700 
+                transition-colors hover:cursor-pointer"
+                onClick={() => openDrawer(proj)}
               >
                 <div>
                   <h3 className="font-semibold text-md">{proj.name}</h3>
