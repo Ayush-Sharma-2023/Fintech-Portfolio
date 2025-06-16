@@ -14,7 +14,7 @@ const skills = [
 function Holdings() {
   return (
     <div className="p-6 bg-gray-900 text-white rounded-lg shadow-lg w-full overflow-auto">
-      <h2 className="text-2xl font-semibold mb-4">💼 Holdings </h2>
+      <h2 className="text-2xl font-semibold mb-4"> Holdings </h2>
       <table className="min-w-full text-sm text-left">
         <thead className="bg-gray-800 text-gray-300">
           <tr>

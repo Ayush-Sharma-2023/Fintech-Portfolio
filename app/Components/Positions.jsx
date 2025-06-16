@@ -45,7 +45,7 @@ const positions = [
 
   {
     role: "Frontend Developer",
-    company: "RNPSoft Pvt. Ltd.",
+    company: "RnPsoft",
     duration: "May-2024 - Aug-2024",
     skills: ["React.js", "CSS"],
     description: [
@@ -67,7 +67,8 @@ export default function Positions() {
   // <div className="max-w-3xl mx-auto px-4 text-white">
   <div className="max-w-full mx-auto px-4 text-white">
     <h1 className="text-2xl font-bold mb-6 flex items-center gap-2 text-white">
-      <Briefcase className="text-blue-400" /> Positions
+      {/* <Briefcase className="text-blue-400" />  */}
+      Positions
     </h1>
 
     {positions.map((pos, idx) => (
