@@ -11,10 +11,9 @@ const positions = [
     description: [
       "Developed RESTful services for internal tools.",
       "Managed authentication using JWT and Spring Security.",
-      "Wrote optimized SQL queries and handled DB migrations."
+      "Wrote optimized SQL queries and handled DB migrations.",
     ],
   },
-
 
   {
     role: "Frontend Developer",
@@ -24,7 +23,7 @@ const positions = [
     description: [
       "Developed RESTful services for internal tools.",
       "Managed authentication using JWT and Spring Security.",
-      "Wrote optimized SQL queries and handled DB migrations."
+      "Wrote optimized SQL queries and handled DB migrations.",
     ],
   },
   {
@@ -35,13 +34,9 @@ const positions = [
     description: [
       "Developed RESTful services for internal tools.",
       "Managed authentication using JWT and Spring Security.",
-      "Wrote optimized SQL queries and handled DB migrations."
+      "Wrote optimized SQL queries and handled DB migrations.",
     ],
   },
-
-
-
-
 
   {
     role: "Frontend Developer",
@@ -51,7 +46,7 @@ const positions = [
     description: [
       "Built a dynamic dashboard using React.",
       "Worked with REST APIs for real-time updates.",
-      "Contributed to UI/UX improvements using Tailwind CSS."
+      "Contributed to UI/UX improvements using Tailwind CSS.",
     ],
   },
 ];
@@ -63,52 +58,51 @@ export default function Positions() {
     setOpenIndex(openIndex === index ? null : index);
   };
 
- return (
-  // <div className="max-w-3xl mx-auto px-4 text-white">
-  <div className="max-w-full mx-auto px-4 text-white">
-    <h1 className="text-2xl font-bold mb-6 flex items-center gap-2 text-white">
-      {/* <Briefcase className="text-blue-400" />  */}
-      Positions
-    </h1>
+  return (
+    // <div className="max-w-3xl mx-auto px-4 text-white">
+    <div className="max-w-full mx-auto px-4 text-white">
+      <h1 className="text-2xl font-bold mb-6 flex items-center gap-2 text-white">
+        {/* <Briefcase className="text-blue-400" />  */}
+        Positions
+      </h1>
 
-    {positions.map((pos, idx) => (
-      <div
-        key={idx}
-        className="mb-4 p-4 border-l-4 border-blue-500 bg-gray-900 shadow-md rounded"
-      >
-        <div className="flex justify-between items-center">
-          <div>
-            <h2 className="text-lg font-semibold text-white">
-              {pos.role} @ {pos.company}
-            </h2>
-            <p className="text-sm text-gray-400 flex items-center gap-1">
-              <Calendar size={16} /> {pos.duration}
-            </p>
-            <p className="mt-1 text-sm text-gray-300 italic">
-              Skills: {pos.skills.join(", ")}
-            </p>
+      {positions.map((pos, idx) => (
+        <div
+          key={idx}
+          className="mb-4 p-4 border-l-4 border-blue-500 bg-gray-900 shadow-md rounded"
+        >
+          <div className="flex justify-between items-center">
+            <div>
+              <h2 className="text-lg font-semibold text-white">
+                {pos.role} @ {pos.company}
+              </h2>
+              <p className="text-sm text-gray-400 flex items-center gap-1">
+                <Calendar size={16} /> {pos.duration}
+              </p>
+              <p className="mt-1 text-sm text-gray-300 italic">
+                Skills: {pos.skills.join(", ")}
+              </p>
+            </div>
+
+            <button
+              onClick={() => toggleAccordion(idx)}
+              className="text-blue-400 hover:text-blue-300 hover:cursor-pointer"
+              title="More Info"
+            >
+              <BadgeInfo />
+            </button>
           </div>
 
-          <button
-            onClick={() => toggleAccordion(idx)}
-            className="text-blue-400 hover:text-blue-300 hover:cursor-pointer"
-            title="More Info"
-          >
-            <BadgeInfo />
-          </button>
+          {/* Accordion description */}
+          {openIndex === idx && (
+            <div className="mt-3 text-sm text-gray-200 space-y-2">
+              {pos.description.map((line, i) => (
+                <p key={i}>• {line}</p>
+              ))}
+            </div>
+          )}
         </div>
-
-        {/* Accordion description */}
-        {openIndex === idx && (
-          <div className="mt-3 text-sm text-gray-200 space-y-2">
-            {pos.description.map((line, i) => (
-              <p key={i}>• {line}</p>
-            ))}
-          </div>
-        )}
-      </div>
-    ))}
-  </div>
-);
-
+      ))}
+    </div>
+  );
 }

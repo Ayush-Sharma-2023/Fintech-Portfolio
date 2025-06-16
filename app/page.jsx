@@ -39,7 +39,7 @@ export default function Page() {
           {/* <OHLC /> */}
           {/* <img src="/images/bull.png" alt="Bull" className="w-64 h-60 mt-16" /> */}
           <img
-            src={Bull.src}
+            // src={Bull.src}
             alt="Bull"
             className="w-64 h-60 mt-16 hover:cursor-pointer hover:p-2"
             onClick={() => setActiveAnimal("bull")}
@@ -61,10 +61,10 @@ export default function Page() {
             </div>
           )}
 
-          <Charts />
+          {/* <Charts /> */}
           {/* <img src="/images/bear.png" alt="Bear" className="w-64 h-64 mt-16" /> */}
           <img
-            src={Bear.src}
+            // src={Bear.src}
             alt="Bear"
             className="w-64 h-64 mt-16 hover:cursor-pointer hover:p-2"
             onClick={() => setActiveAnimal("bear")}

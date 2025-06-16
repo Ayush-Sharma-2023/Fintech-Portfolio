@@ -16,8 +16,9 @@ export default function IPOCard() {
       {/* Toggle Button (Top-Right) */}
       <button
         onClick={toggleCard}
-        className="fixed top-4 right-4 z-30 bg-gray-800 text-white px-4 py-1 rounded hover:bg-gray-700 transition-all text-sm flex items-center gap-1 hover:cursor-pointer"
-      >
+        className="fixed top-4 right-4 z-50 bg-gradient-to-br from-blue-800 to-blue-600 text-white px-4 py-2 
+  rounded-xl flex items-center gap-2 hover:scale-105 hover:shadow-blue-500/50 transition-all shadow-lg group"
+>
         Upcoming IPO {open ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
       </button>
 

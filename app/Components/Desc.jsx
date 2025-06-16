@@ -2,12 +2,10 @@
 import React, { useState } from "react";
 import Holdings from "./Holdings";
 import Orders from "./Orders";
-
-// Components
 import Positions from "./Positions";
-// const Orders = () => <p>📦 These are your Orders</p>;
-// const Holdings = () => <p>💼 These are your Holdings</p>;
+import Tools from "./Tools";
 
+// const Tools = () => <p>This is tools</p>;
 
 export default function Desc() {
   const [activeTab, setActiveTab] = useState("Orders");
@@ -20,32 +18,47 @@ export default function Desc() {
         return <Positions />;
       case "Holdings":
         return <Holdings />;
+      case "Tools":
+        return <Tools />;
       default:
         return null;
     }
   };
 
   return (
-    // <div className="p-6 max-w-[55rem] mx-auto h-[50rem] bg-gray-900 text-gray-100 rounded-lg shadow-xl">
-    <div className="p-6   h-[50rem]  mt-16 bg-gray-900 text-gray-100 rounded-lg shadow-xl">
-      {/* <h1 className="text-2xl font-bold mb-6 text-white">📘 Description Panel</h1> */}
-
+    <div className="p-6 h-[50rem] mt-16 bg-gray-900 text-gray-100 rounded-lg shadow-xl">
       {/* Tabs */}
-      <div className="flex gap-4 border-b border-gray-700 mb-6">
+      <div className="flex gap-4 border-b border-gray-700 mb-6 items-center">
+
         {["Orders", "Positions", "Holdings"].map((tab) => (
           <button
-            key={tab}
-            onClick={() => setActiveTab(tab)}
-            className={`py-2 px-4 font-medium border-b-2 transition-all ${
-              activeTab === tab
-                ? "border-blue-400 text-blue-400"
-                : "border-transparent text-gray-400 hover:text-blue-300 hover:cursor-pointer"
-            }`}
+          key={tab}
+          onClick={() => setActiveTab(tab)}
+          className={`py-4 px-4 font-medium border-b-2 transition-all ${
+            activeTab === tab
+            ? "border-blue-400 text-blue-400"
+            : "border-transparent text-gray-400 hover:text-blue-300 hover:cursor-pointer"
+          }`}
           >
             {tab}
           </button>
         ))}
-      </div>
+
+        {/* Special Tools Button */}
+
+
+        <button
+          onClick={() => setActiveTab("Tools")}
+          className={`ml-auto py-2  px-6 font-semibold rounded-full border-2 shadow-lg transition-all duration-300 mb-4 hover:cursor-pointer
+            ${
+              activeTab === "Tools"
+              ? "border-yellow-400 text-white bg-yellow-900 "
+              : "border-yellow-500 text-yellow-300 hover:bg-yellow-800 hover:text-white"
+            }`}
+            >
+         Tools
+        </button>
+              </div>
 
       {/* Content */}
       <div className="bg-gray-800 p-6 rounded-lg shadow-inner min-h-[300px]">

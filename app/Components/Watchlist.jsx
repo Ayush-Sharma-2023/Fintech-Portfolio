@@ -1,12 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import {
-  Info,
-  ExternalLink,
-  X,
-  ChevronDown,
-  ChevronUp,
-} from "lucide-react";
+import { Info, ExternalLink, X, ChevronDown, ChevronUp } from "lucide-react";
 
 const projects = [
   {
@@ -21,28 +15,33 @@ const projects = [
         and Analyze various investment assets and MF
       </>
     ),
-    link: "https://github.com/Ayush-Sharma-2023/Finance_Management_Platform",
+    repolink:
+      "https://github.com/Ayush-Sharma-2023/Finance_Management_Platform",
+    link: "https://ayush-sharma-2023.github.io/Finance_Management_Platform/",
   },
   {
-  name: "Auto Attendance Tracker",
-  ticker: "NSE",
-  tech: "JavaScript, DOM, Browser Extension",
-  description: (
-    <>
-      A browser extension that scans your online attendance table using DOM parsing,<br />
-      calculates how many classes you can safely skip or must attend to maintain a 75% threshold,<br />
-      and dynamically injects an interactive planner back into the same page.<br />
-      ⚡ Loved and used by hundreds of students for its efficiency and accuracy.
-      <br />
-      Works on https://ezone.sharda.ac.in/ezone-2022/admin/studentlogin
-    </>
-  ),
-  link: "https://github.com/Ayush-Sharma-2023/attendance-extension",
-}
-
-  
- 
- 
+    name: "Auto Attendance Tracker",
+    ticker: "NSE",
+    tech: "JavaScript, DOM, Browser Extension",
+    description: (
+      <>
+        A browser extension that scans your online attendance table using DOM
+        parsing,
+        <br />
+        calculates how many classes you can safely skip or must attend to
+        maintain a 75% threshold,
+        <br />
+        and dynamically injects an interactive planner back into the same page.
+        <br />
+        ⚡ Loved and used by hundreds of students for its efficiency and
+        accuracy.
+        <br />
+        Works on https://ezone.sharda.ac.in/ezone-2022/admin/studentlogin
+      </>
+    ),
+    link: "https://github.com/Ayush-Sharma-2023/attendance-extension",
+    repolink: "https://github.com/Ayush-Sharma-2023/attendance-extension",
+  },
 ];
 
 export default function Sidebar() {
@@ -65,15 +64,17 @@ export default function Sidebar() {
   return (
     <>
       {/* Toggle Button - top-left */}
-      <button
+    <button
   onClick={toggleSidebar}
-  className="fixed top-4 left-8 z-50 bg-gray-800 text-white px-4 py-2 rounded-md flex items-center gap-2 hover:bg-gray-700 transition-all shadow hover:cursor-pointer"
+  className="fixed top-4 left-8 z-50 bg-gradient-to-br from-blue-800 to-blue-600 text-white px-4 py-2 
+  rounded-xl flex items-center gap-2 hover:scale-105 hover:shadow-blue-500/50 transition-all shadow-lg group"
 >
   {sidebarOpen ? (
+    
     <ChevronUp size={18} />
   ) : (
     <>
-      <span className="text-sm font-medium">Watchlist</span>
+      <span className="text-sm font-medium "> Watchlist</span>
       <ChevronDown size={18} />
     </>
   )}
@@ -87,9 +88,8 @@ export default function Sidebar() {
         }`}
       >
         <div className="p-4 max-h-[calc(100vh-18rem)] overflow-y-auto">
-
           <h2 className="text-xl font-bold mb-4 border-b border-gray-700 pb-2 pl-20">
-             Watchlist
+            Watchlist
           </h2>
 
           <div className="space-y-4">
@@ -144,9 +144,7 @@ export default function Sidebar() {
               </h3>
               <p className="text-sm text-gray-400">
                 🏷️ Ticker:{" "}
-                <span className="text-blue-300">
-                  {selectedProject.ticker}
-                </span>
+                <span className="text-blue-300">{selectedProject.ticker}</span>
               </p>
             </div>
             <button onClick={closeDrawer}>
@@ -159,9 +157,7 @@ export default function Sidebar() {
             {/* Tech Stack */}
             <div className="text-sm">
               <p className="text-gray-400 mb-1">📊 Sector</p>
-              <p className="text-white font-medium">
-                {selectedProject.tech}
-              </p>
+              <p className="text-white font-medium">{selectedProject.tech}</p>
             </div>
 
             {/* Description */}
@@ -176,7 +172,7 @@ export default function Sidebar() {
             <div className="text-sm">
               <p className="text-gray-400 mb-1">🔗 Investor Relations</p>
               <a
-                href={selectedProject.link}
+                href={selectedProject.repolink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-blue-400 hover:text-blue-300 underline"
