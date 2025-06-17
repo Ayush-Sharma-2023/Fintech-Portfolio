@@ -4,9 +4,10 @@ import { Info, ExternalLink, X, ChevronDown, ChevronUp } from "lucide-react";
 
 const projects = [
   {
-    name: "Finance Management and Budgeting tool",
+    name: "Finance Management & Budgeting tool",
     ticker: "NSE",
     tech: "Next.js, Tailwind, API",
+    desc: "Tool to manage budget ",
     description: (
       <>
         A Platform to calculate Tax by comparing Old Tax Regime vs New Tax
@@ -83,7 +84,7 @@ export default function Sidebar() {
 
       {/* Dropdown Sidebar from top-left */}
       <div
-        className={`fixed top-0 left-0 w-[18rem] bg-gray-900 text-white shadow-xl z-40 transition-transform duration-300 ${
+        className={`fixed top-0 left-0 w-[22rem] bg-gray-900 text-white shadow-xl z-40 transition-transform duration-300 ${
           sidebarOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
@@ -91,6 +92,8 @@ export default function Sidebar() {
           <h2 className="text-xl font-bold mb-4 border-b border-gray-700 pb-2 pl-20">
             Watchlist
           </h2>
+
+          <h2 className="p-2">Upcoming Financial tools and Projects </h2>
 
           <div className="space-y-4">
             {projects.map((proj, idx) => (
@@ -101,14 +104,15 @@ export default function Sidebar() {
                 onClick={() => openDrawer(proj)}
               >
                 <div>
-                  <h3 className="font-semibold text-md">{proj.name}</h3>
+                  <h3 className="font-semibold text-md pr-9">{proj.name}</h3>
                   <p className="text-xs text-gray-400">
-                    {proj.ticker} | {proj.tech}
+                    {/* {proj.ticker} | {proj.tech} */}
+                    {proj.desc}
                   </p>
                 </div>
 
                 {/* Icon buttons */}
-                <div className="absolute top-2 right-2 flex space-x-2">
+                <div className=" pt-2  flex space-x-2">
                   <button onClick={() => openDrawer(proj)} title="Info">
                     <Info
                       size={16}

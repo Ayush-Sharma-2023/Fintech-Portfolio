@@ -3,7 +3,21 @@ import { Info, ExternalLink } from "lucide-react";
 
 const achievements = [
   {
-    tool: "Partial Covered Call Calculator",
+    tool: "Personal Finance Management Platform ",
+    purpose:
+      "Generate tax-smart investment plans based on your income, goals, and risk profile.",
+    link: "https://ayush-sharma-2023.github.io/Finance_Management_Platform/",
+    desc: [
+      "Enter your income and financial goals",
+      "Calculate taxes under both old and new regimes",
+      "Suggest multiple investment basket (e.g., Equity 30%, Debt 30%, Gold 40%)",
+      "Estimate time to reach your goal for each basket",
+      "Visualize performance and risk using interactive graphs",
+      "Github Repo link: https://github.com/Ayush-Sharma-2023/Finance_Management_Platform",
+    ],
+  },
+  {
+    tool: "Partial Covered Call Calculator {Under Development}",
     purpose: "Simulate fractional lot covered calls ",
     link: "https://example.com",
     desc: [
@@ -48,7 +62,7 @@ function Tools() {
           {achievements.map((ach, idx) => (
             <React.Fragment key={idx}>
               <tr className="border-b border-gray-700 hover:bg-gray-800 transition">
-                <td className="px-4 py-2 font-medium">{ach.tool} <span className="text-red-500"> (Under Development)</span></td>
+                <td className="px-4 py-2 font-medium">{ach.tool} </td>
                 <td className="px-4 py-2">{ach.purpose}</td>
                 <td className="px-4 py-2">
                   <button onClick={() => toggleAccordion(idx)}>
@@ -60,11 +74,7 @@ function Tools() {
                   </button>
                 </td>
                 <td className="px-4 py-2">
-                  <a
-                    href={ach.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a href={ach.link} target="_blank" rel="noopener noreferrer">
                     <ExternalLink className="w-5 h-5 text-gray-400 hover:text-green-400 transition hover:scale-110" />
                   </a>
                 </td>

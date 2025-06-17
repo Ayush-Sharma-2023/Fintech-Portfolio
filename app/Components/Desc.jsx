@@ -8,7 +8,7 @@ import Tools from "./Tools";
 // const Tools = () => <p>This is tools</p>;
 
 export default function Desc() {
-  const [activeTab, setActiveTab] = useState("Orders");
+  const [activeTab, setActiveTab] = useState("Tools");
 
   const renderTabContent = () => {
     switch (activeTab) {
@@ -52,8 +52,9 @@ export default function Desc() {
           className={`ml-auto py-2  px-6 font-semibold rounded-full border-2 shadow-lg transition-all duration-300 mb-4 hover:cursor-pointer
             ${
               activeTab === "Tools"
-              ? "border-yellow-400 text-white bg-yellow-900 "
-              : "border-yellow-500 text-yellow-300 hover:bg-yellow-800 hover:text-white"
+              ? "border-blue-400 text-white bg-blue-900 "
+              // : "border-blue-500 text-blue-300 hover:bg-blue-800 hover:text-white"
+              : " border-none text-gray-400 hover:bg-blue-800 hover:text-white"
             }`}
             >
          Tools

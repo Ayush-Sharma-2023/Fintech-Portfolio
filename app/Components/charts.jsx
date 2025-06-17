@@ -18,7 +18,7 @@ export default function SemesterMarksCandlestick() {
 // Generalized last candle values
 const lastCandleOpen = 7.95;
 const lastCandleHigh = 9.0;
-const lastCandleLow = 7.0;
+const lastCandleLow = 7.5;
 let lastClose = 8.0;
 
 // Function to generate bounded close price with mild bullish drift
@@ -40,13 +40,27 @@ const initialData = [
   { x: "Class 10", y: [7.0, 7.8, 6.9, 7.6] },
   { x: "Class 12", y: [7.6, 7.9, 7.4, 7.25] },
   { x: "Sem 1", y: [7.25, 7.7, 7.2, 7.55] },
-  { x: "Sem 2", y: [7.55, 8.0, 7.45, 7.85] },
-  { x: "Sem 3", y: [7.85, 8.2, 7.75, 8.15] },
-  { x: "Sem 4", y: [8.15, 8.5, 8.1, 8.35] },
-  { x: "Sem 5", y: [8.35, 8.7, 8.3, 8.55] },
-  { x: "Sem 6", y: [8.55, 8.8, 8.4, 7.95] },
+  { x: "Sem 2", y: [7.55, 8.0, 7.45, 7.87] },
+  { x: "Sem 3", y: [7.87, 8.2, 7.75, 8.04] },
+  { x: "Sem 4", y: [8.04, 8.08, 6.5, 8.08] },
+  { x: "Sem 5", y: [8.08, 8.17, 6.75, 8.17] },
+  { x: "Sem 6", y: [8.17, 8.45, 7, 7.82] },
   { x: "Sem 7", y: [lastCandleOpen, lastCandleHigh, lastCandleLow, getBoundedClose()] },
 ];
+
+  
+
+// const initialData = [
+//   { x: "Class 10", y: [7.0, 7.8, 6.9, 7.6] },
+//   { x: "Class 12", y: [7.6, 7.9, 7.4, 7.25] },
+//   { x: "Sem 1", y: [7.25, 7.7, 7.2, 7.51] },
+//   { x: "Sem 2", y: [7.51, 8.0, 7.45, 7.69] },
+//   { x: "Sem 3", y: [7.69, 8.2, 7.75, 7.82] },
+//   { x: "Sem 4", y: [7.82, 8.5, 8.1, 7.89] },
+//   { x: "Sem 5", y: [7.89, 8.7, 8.3, 7.95] },
+//   { x: "Sem 6", y: [7.95, 8.8, 8.4, 7.25] },
+//   { x: "Sem 7", y: [lastCandleOpen, lastCandleHigh, lastCandleLow, getBoundedClose()] },
+// ];
 
 const [series, setSeries] = useState([{ data: initialData }]);
 
