@@ -68,7 +68,7 @@ export default function Sidebar() {
     <button
   onClick={toggleSidebar}
   className="fixed top-4 left-8 z-50 bg-gradient-to-br from-blue-800 to-blue-600 text-white px-4 py-2 
-  rounded-xl flex items-center gap-2 hover:scale-105 hover:shadow-blue-500/50 transition-all shadow-lg group"
+  rounded-xl flex items-center gap-2 hover:scale-105 hover:shadow-blue-500/50 transition-all shadow-lg group hover:cursor-pointer"
 >
   {sidebarOpen ? (
     

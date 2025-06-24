@@ -3,24 +3,54 @@ import { Info } from "lucide-react";
 
 const achievements = [
   {
-    symbol: "Smart India Hackathon Finalist",
+    symbol: "Innoverse'36 Hackathon winner ",
     status: "Completed",
-    date: "Aug 2023",
+    date: "Feb 2025",
     desc: [
-      "Built a blockchain-based voting system.",
-      "Used Ethereum and Solidity.",
-      "Ensured end-to-end encrypted ballots.",
+      "Led a team of 3 members in a Hackathon and won 2nd runner up",
+      "Actively guided the team for 36 hours straight",
+      "Built 'Finance Management & Budgeting tool'",
     ],
   },
   {
-    symbol: "Crack Zerodha Interview",
-    status: "Open",
-    date: "–",
+    symbol: "6th Technovation Hackathon Finalist",
+    status: "Completed",
+    date: "Jan 2025",
     desc: [
-      "Targeting to clear all rounds by end of 2025.",
-      "Focus: DSA, system design, project polish.",
+      "Led a team of 3 in building a Community Resource Management System",
+      "Reached the finals — my first time as a hackathon finalist",
+      "Though we didn’t win, the experience boosted my confidence and sharpened my leadership under pressure",
     ],
   },
+
+  {
+    symbol: "Smart India Hackathon Applicant",
+    status: "Completed",
+    date: "Sep 2024",
+    desc: [
+      "Submitted a solution for the Smart India Hackathon and participated in the internal university-level screening round",
+      "Worked on the project 'Career Counselling and Guidance Programs' to help students explore lesser-known career paths",
+      "Led the team in design and architecture discussions, which enhanced my project planning and collaboration skills",
+      "Although we weren’t selected, the experience taught me valuable lessons about team dynamics, accountability, and the importance of aligned teamwork",
+    ],
+  },
+  {
+    symbol: "Winner of 'Space, Science & Technology' Quiz",
+    status: "Completed",
+    date: "Sep 2023",
+    desc: [
+      "Won 1st prize in Quiz on 'Space, Science & Technology' held in our university",
+    ],
+  },
+  {
+    symbol: "Winner of Essay Presentation on 'Space, Science & Technology' ",
+    status: "Completed",
+    date: "Sep 2023",
+    desc: [
+      "Won 2nd prize in Essay Presentation on 'Space, Science & Technology' held in our university",
+    ],
+  },
+
   // more entries...
 ];
 

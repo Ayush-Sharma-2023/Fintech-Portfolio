@@ -19,6 +19,10 @@ export default function Page() {
           <BullImage />
           <Charts />
           <BearImage />
+
+          {/* <div className="h-[20rem]">
+
+          </div> */}
           <IPOCard />
         </div>
 

@@ -24,7 +24,8 @@ let lastClose = 8.0;
 // Function to generate bounded close price with mild bullish drift
 const getBoundedClose = () => {
   const bias = 0.0001;
-  const randomness = (Math.random() - 0.5) * 0.08;
+  // const randomness = (Math.random() - 0.5) * 0.08;
+  const randomness = (Math.random() - 0.5) * 0.1;
   let change = randomness + bias;
   // let change = randomness ;
 
