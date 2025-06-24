@@ -30,13 +30,13 @@ export default function BullImage() {
           </div>
 
           <Typewriter
-            text={`A  bull market is a phase where stock prices rise steadily. It reflects optimism, investor confidence, and strong economic growth. Think of it as the market charging forward — like a bull.`}
+            text={`A  bull market is a period in which stock prices rise consistently over time, driven by strong investor confidence, positive economic indicators, and upward momentum. It reflects optimism in the market, with increased buying activity and growth-focused sentiment.`}
           />
 
           <div className="mt-6 flex justify-center">
             <Link href="/market">
-              <button className="bg-green-500 hover:bg-green-600 text-black font-semibold px-5 py-2 rounded-full shadow-md transition duration-300 hover:cursor-pointer">
-                🚀 Explore the World of Stock Market
+              <button className="bg-green-500 hover:bg-green-600 text-white font-semibold px-5 py-2 rounded-full shadow-md transition duration-300 hover:cursor-pointer">
+                Explore Market,  The Programmer’s Way
               </button>
             </Link>
           </div>

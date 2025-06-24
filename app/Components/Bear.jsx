@@ -30,13 +30,13 @@ export default function BearImage() {
           </div>
 
           <Typewriter
-            text={`A  bear market is a phase when prices fall sharply, often due to fear and economic uncertainty. It's the market pulling back — like a bear swiping downward.\n\nWhile scary, bear markets can also offer rare buying opportunities for disciplined investors.`}
+            text={`A  bear market is a phase where stock prices decline sharply, typically by 20% or more from recent highs. It’s marked by fear, uncertainty, and pessimism, often triggered by economic slowdowns, weak investor sentiment, or external shocks. Selling pressure dominates, and risk-off behavior takes over.`}
           />
 
           <div className="mt-6 flex justify-center">
             <Link href="/market">
-              <button className="bg-red-500 hover:bg-red-600 text-black font-semibold px-5 py-2 rounded-full shadow-md transition duration-300 hover:cursor-pointer">
-                🛡 Learn How to Survive a Bear Market
+              <button className="bg-red-500 hover:bg-red-600 text-whtie font-semibold px-5 py-2 rounded-full shadow-md transition duration-300 hover:cursor-pointer">
+                Explore Market,  The Programmer’s Way
               </button>
             </Link>
           </div>
