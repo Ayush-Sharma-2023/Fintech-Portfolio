@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
 
-export default function page() {
+export default function Page() {
   return (
-    <div>
-      <h1>this is market</h1>
-    </div>
-  )
+    <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center px-4">
+      <h1 className="text-4xl md:text-5xl font-bold mb-4 text-center">
+         Coming Soon
+      </h1>
+      <p className="text-lg text-gray-300 text-center max-w-md">
+        I'm building something exciting in the market space. Stay tuned 
+      </p>
+
+        
+      </div>
+  );
 }
